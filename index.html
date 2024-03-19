@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybercrime Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-controller="MainController">
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1 class="text-center">Cybercrime Portfolio</h1>
+            <nav class="text-center">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="about" class="py-5">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Welcome to my cybercrime portfolio website. I am passionate about cybersecurity and helping businesses stay protected against cyber threats.</p>
+        </div>
+    </div>
+
+    <div id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2>Services</h2>
+            <ul>
+                <li>Penetration Testing</li>
+                <li>Security Audits</li>
+                <li>Incident Response</li>
+                <li>Security Awareness Training</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact" class="py-5">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form ng-submit="submitForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" ng-model="formData.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" ng-model="formData.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="4" ng-model="formData.message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Cybercrime Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Main AngularJS Controller -->
+    <script src="app.js"></script>
+</body>
+</html>
